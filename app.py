@@ -6,6 +6,8 @@ import os
 from dotenv import load_dotenv
 import subprocess
 load_dotenv()
+os.system(f"streamlit run app.py --server.port {os.getenv('PORT', '8501')}")
+
 
 print("Python Path:", os.sys.executable)
 print("Installed Packages:")
