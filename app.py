@@ -5,8 +5,12 @@ import tensorflow as tf
 import os
 from dotenv import load_dotenv
 import subprocess
+import subprocess
 load_dotenv()
-os.system(f"streamlit run app.py --server.port {os.getenv('PORT', '8501')}")
+print("Installed Packages:")
+subprocess.run(["pip", "list"])
+
+
 
 
 print("Python Path:", os.sys.executable)
