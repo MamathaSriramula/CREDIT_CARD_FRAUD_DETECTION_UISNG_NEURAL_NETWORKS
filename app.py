@@ -4,7 +4,12 @@ import numpy as np
 import tensorflow as tf
 import os
 from dotenv import load_dotenv
+import subprocess
 load_dotenv()
+
+print("Python Path:", os.sys.executable)
+print("Installed Packages:")
+subprocess.run(["pip", "list"])
 port = int(os.getenv('PORT',8501))
 model = tf.keras.models.load_model('credit_card_fraud_detection_model.h5')
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
